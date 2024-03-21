@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Textarea } from "@/components/ui/textarea"
-import { JSX, SVGProps } from "react"
-import { useEffect, useState } from "react"
+import { JSX, SVGProps, SetStateAction, useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import { Card, CardTitle } from "@/components/ui/card"
 
 async function fetchSystemPrompts() {
   const response = await fetch("/api/system-prompt")
