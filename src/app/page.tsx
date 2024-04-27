@@ -14,10 +14,10 @@ async function fetchSystemPrompts() {
 
 export default function MbtiBot() {
 
-  const systemPrompts = [
-    { title : "T's Response" },
-    { title : "F's Response" },
-  ]
+  const [systemPrompts, setSystemPrompts] = useState([])
+    useEffect(() => {
+      fetchSystemPrompts().then((data) => setSystemPrompts(data))
+    }, [])
 
   return (
     <>
@@ -223,3 +223,7 @@ function SettingsIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) 
     </svg>
   )
 }
+function data(value: any) {
+  throw new Error("Function not implemented.")
+}
+
