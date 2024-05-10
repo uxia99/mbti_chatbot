@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Textarea } from "@/components/ui/textarea"
+import { JSX, SVGProps } from "react"
 
 export function MbtiBot() {
   return (
@@ -109,7 +110,7 @@ export function MbtiBot() {
         <div className="bg-gray-100 px-4 py-3 shadow-inner dark:bg-gray-200 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-4">
             <Textarea
-              className="flex-1 rounded-md border-gray-300 bg-white px-4 py-2 text-sm shadow-sm transition-colors focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-gray-200 dark:bg-white dark:text-gray-50 dark:focus:border-gray-500 dark:focus:ring-gray-500"
+              className="flex-1 rounded-md border-gray-300 bg-white px-4 py-2 text-sm shadow-sm transition-colors focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-gray-200 dark:bg-white dark:text-black dark:focus:border-gray-500 dark:focus:ring-gray-500"
               placeholder="Type your message..."
             />
             <Button>
@@ -123,7 +124,7 @@ export function MbtiBot() {
   )
 }
 
-function CircleHelpIcon(props) {
+function CircleHelpIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -145,7 +146,7 @@ function CircleHelpIcon(props) {
 }
 
 
-function FrownIcon(props) {
+function FrownIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -168,7 +169,7 @@ function FrownIcon(props) {
 }
 
 
-function ReplyIcon(props) {
+function ReplyIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -189,7 +190,7 @@ function ReplyIcon(props) {
 }
 
 
-function SendIcon(props) {
+function SendIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -210,7 +211,7 @@ function SendIcon(props) {
 }
 
 
-function SettingsIcon(props) {
+function SettingsIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
