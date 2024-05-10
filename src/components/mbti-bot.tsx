@@ -34,17 +34,11 @@ export function MbtiBot() {
                 <ReplyIcon className="h-5 w-5 text-gray-400 dark:text-gray-900" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 space-y-1">
-              <DropdownMenuItem>Friendly</DropdownMenuItem>
-              <DropdownMenuItem>Formal</DropdownMenuItem>
-              <DropdownMenuItem>Empathetic</DropdownMenuItem>
-              <DropdownMenuItem>Concise</DropdownMenuItem>
-            </DropdownMenuContent>
           </DropdownMenu>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost">
-                <FrownIcon className="h-5 w-5 text-gray-400 dark:text-gray-900" />
+                <SmileIcon className="h-5 w-5 text-gray-400 dark:text-gray-900" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 space-y-1">
@@ -54,9 +48,9 @@ export function MbtiBot() {
           </DropdownMenu>
         </div>
         <div className="flex items-center space-x-4">
-          <Button variant="ghost">
+          {/* <Button variant="ghost">
             <SettingsIcon className="h-5 w-5 text-gray-400 dark:text-gray-900" />
-          </Button>
+          </Button> */}
           <Button variant="ghost">
             <CircleHelpIcon className="h-5 w-5 text-gray-400 dark:text-gray-900" />
           </Button>
@@ -146,7 +140,7 @@ function CircleHelpIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 }
 
 
-function FrownIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+function SmileIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -160,8 +154,9 @@ function FrownIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
+
       <circle cx="12" cy="12" r="10" />
-      <path d="M16 16s-1.5-2-4-2-4 2-4 2" />
+      <path d="M9 16c1.5 1 3.5 1 6 0" />
       <line x1="9" x2="9.01" y1="9" y2="9" />
       <line x1="15" x2="15.01" y1="9" y2="9" />
     </svg>
