@@ -24,6 +24,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { JSX, SVGProps } from "react"
 
 export function MbtiBot() {
+
+  const systemPrompts = [
+    { title : "T's Response" },
+    { title : "F's Response" },
+  ]
+
   return (
     <>
       <header className="flex items-center justify-between bg-gray-900 px-4 py-3 shadow-md dark:bg-gray-200 sm:px-6 lg:px-8">
@@ -42,8 +48,11 @@ export function MbtiBot() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 space-y-1">
-              <DropdownMenuItem>{"T's Response"}</DropdownMenuItem>
-              <DropdownMenuItem>{"F's Response"}</DropdownMenuItem>
+              {systemPrompts.map((prompt, index) => (
+                <DropdownMenuItem key={index}>{prompt.title}</DropdownMenuItem>
+              ))}
+              {/* <DropdownMenuItem>{"T's Response"}</DropdownMenuItem>
+              <DropdownMenuItem>{"F's Response"}</DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
