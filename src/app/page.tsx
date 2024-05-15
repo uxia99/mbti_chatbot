@@ -80,6 +80,7 @@ export default function MbtiBot() {
     const data = await sendMessage(chatList, message, systemPrompt?.prompt);
 
     setChatList(data);
+    setMessage("");
   };
 
   return (

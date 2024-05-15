@@ -12,14 +12,14 @@ export async function GET() {
   return NextResponse.json(systemPrompts);
 }
 
-// export async function POST(req: NextRequest) {
-//   const { title, prompt }: CreateSystemPromptRequest = await req.json();
+export async function POST(req: NextRequest) {
+  const { title, prompt }: CreateSystemPromptRequest = await req.json();
 
-//   const newSystemPrompt = await prisma.systemPrompt.create({
-//     data: {
-//       title,
-//       prompt,
-//     },
-//   });
-//   return NextResponse.json(newSystemPrompt);
-// }
+  const newSystemPrompt = await prisma.systemPrompt.create({
+    data: {
+      title,
+      prompt,
+    },
+  });
+  return NextResponse.json(newSystemPrompt);
+}
